@@ -1,0 +1,11 @@
+var a int
+var x [5]int
+func f(x int) {  # scope if x/int starts here
+  var x double  # scope of x/double starts here
+  a = 10
+  while a>0 {
+    var x string  # scope of x/string starts here
+    a = a-1
+  }  # scope of x/string ends here
+} # scope of x/int and x/double ends here
+# x/array is again visible here 
