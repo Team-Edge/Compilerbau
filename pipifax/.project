@@ -18,7 +18,7 @@
 		<link>
 			<name>generated-sources</name>
 			<type>2</type>
-			<location>C:/Users/Florian/git/Compilerbau/Pipifax_antlr/target/generated-sources</location>
+			<location>../Pipifax_antlr/target/generated-sources</location>
 		</link>
 	</linkedResources>
 </projectDescription>
