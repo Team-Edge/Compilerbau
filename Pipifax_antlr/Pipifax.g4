@@ -58,7 +58,7 @@ NUM_E_FLOAT		: FR_FLOAT FR_EXPDIGIT FR_OPTVZ FR_NNDIGIT FR_DIGIT*;
 STRING			: '"' .*? '"' ;
 ID				: [a-zA-Z_] [a-zA-Z_0-9]* ;
 
-COMMENT 		: '#' .*? '\n' -> skip ;
+COMMENT 		: '#'  ~('\r' | '\n')* -> skip ;
 WS 				: [ \t\r\n]+ -> skip ;
 
 
