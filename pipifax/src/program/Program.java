@@ -32,13 +32,13 @@ public class Program {
 		System.out.println(t.toStringTree(parser));
 
 		System.out.println();
-		
+		/*
 		ParseTreePattern p = parser.compileParseTreePattern("<program>", PipifaxParser.RULE_startRule);
 		ParseTreeMatch m = p.match(t);
 		String id = m.get(PipifaxParser.VOCABULARY.getSymbolicName(PipifaxParser.RULE_program)).toStringTree();
 		
 		System.out.println(id);
-		
+		*/
 		
 	}
 

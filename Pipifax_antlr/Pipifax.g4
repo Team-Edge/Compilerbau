@@ -4,7 +4,7 @@
 grammar Pipifax;
 
 
-startRule		: program ;
+startRule		: program EOF;
 
 
 //////////////	L E X E R	rules	//////////////
@@ -80,7 +80,7 @@ paramDecl		: ID OP_MULT? dataType;
 
 codeBlock		: BR_OP_3 statement* BR_CL_3;
 
-statement		: ifInstruction | whileLoop | declaration | assignment | expression ;
+statement		: ifInstruction | whileLoop | declaration | assignment | funcCall ;
 
 ifInstruction	: KW_IF expression codeBlock (KW_ELSE codeBlock)? ;
 

@@ -1,4 +1,4 @@
-// Generated from C:\Users\Florian\workspace\Pipifax_antlr\Pipifax.g4 by ANTLR 4.7
+// Generated from ./Pipifax_antlr/Pipifax.g4 by ANTLR 4.7
 package antlrGen;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 

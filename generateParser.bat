@@ -1,0 +1,1 @@
+java -jar "./pipifax/ExtLibs/antlr-4.7-complete.jar" "./Pipifax_antlr/Pipifax.g4" -o "./Pipifax_antlr/target/generated-sources/antlr4/antlrGen" -listener -visitor -package antlrGen -encoding UTF-8
