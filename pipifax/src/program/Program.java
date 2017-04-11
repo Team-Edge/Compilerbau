@@ -5,7 +5,9 @@ import java.io.IOException;
 import org.antlr.v4.runtime.BufferedTokenStream;
 import org.antlr.v4.runtime.CharStream;
 import org.antlr.v4.runtime.CharStreams;
+import org.antlr.v4.runtime.CommonTokenStream;
 import org.antlr.v4.runtime.TokenStream;
+import org.antlr.v4.runtime.UnbufferedTokenStream;
 import org.antlr.v4.runtime.tree.ParseTree;
 import org.antlr.v4.runtime.tree.pattern.ParseTreeMatch;
 import org.antlr.v4.runtime.tree.pattern.ParseTreePattern;
@@ -24,7 +26,7 @@ public class Program {
 		//CharStream fileIn = new ANTLRFileStream("./examples/exampleProgram.txt");
 		CharStream fileIn = CharStreams.fromFileName("./examples/exampleProgram.txt");
 		PipifaxLexer scanner = new PipifaxLexer(fileIn);
-		TokenStream tokens = new BufferedTokenStream(scanner);
+		TokenStream tokens = new CommonTokenStream(scanner);
 		PipifaxParser parser = new PipifaxParser(tokens);
 		
 		

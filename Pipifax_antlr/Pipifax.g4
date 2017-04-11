@@ -49,9 +49,9 @@ fragment FR_NNDIGIT		: [1-9] ;
 fragment FR_NOLEADINGNULLS	: ( FR_DIGIT | (FR_NNDIGIT FR_DIGIT*) ) ;
 fragment FR_DOT			: '.' ;
 fragment FR_EXPDIGIT	: 'e' | 'E' ;
-fragment FR_FLOAT		: OP_MINUS? FR_NOLEADINGNULLS FR_DOT FR_DIGIT* ;
+fragment FR_FLOAT		: FR_NOLEADINGNULLS FR_DOT FR_DIGIT* ;
 fragment FR_OPTVZ		: (OP_PLUS | OP_MINUS)? ;
-NUM_INT			: OP_MINUS? FR_NOLEADINGNULLS ;
+NUM_INT			: FR_NOLEADINGNULLS ;
 NUM_FLOAT		: FR_FLOAT ;
 NUM_E_FLOAT		: FR_FLOAT FR_EXPDIGIT FR_OPTVZ FR_NNDIGIT FR_DIGIT*;
 
@@ -124,7 +124,7 @@ argList			: argument (COMMA argument)*;
 
 argument		: expression;
 
-literal			: cast? (NUM_INT | NUM_FLOAT | NUM_E_FLOAT | STRING);
+literal			: cast? ( OP_MINUS? NUM_INT | OP_MINUS? NUM_FLOAT | OP_MINUS? NUM_E_FLOAT | STRING);
 
 cast			: BR_OP_1 (KW_INT | KW_DOUBLE | KW_STRING) BR_CL_1 ;
 
