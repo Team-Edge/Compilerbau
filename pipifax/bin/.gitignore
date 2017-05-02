@@ -4,7 +4,7 @@
 /PipifaxLexer.tokens
 /PipifaxListener.java
 /PipifaxParser.java
-/program/
+/.gitignore
 /PipifaxBaseListener.class
 /PipifaxLexer.class
 /PipifaxListener.class
@@ -40,3 +40,6 @@
 /PipifaxParser$WhileLoopContext.class
 /PipifaxParser.class
 /antlrGen/
+/program/
+/datatypes/
+/syntaxtree/
