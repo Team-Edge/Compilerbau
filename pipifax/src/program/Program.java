@@ -114,7 +114,7 @@ public class Program {
 					array = true;
 				}
 				
-				else if(array);
+				else if(array) {
 					value = Integer.parseInt(m);
 					array = false;
 				}
